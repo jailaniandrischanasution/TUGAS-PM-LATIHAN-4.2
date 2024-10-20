@@ -11,12 +11,10 @@ public class TextEditor {
     }
 
     public void write(String text) {
-        // Hapus semua history setelah currentIndex jika ada
         if (currentIndex < history.size() - 1) {
             history.subList(currentIndex + 1, history.size()).clear();
         }
 
-        // Tambahkan teks ke history
         history.add(text);
         currentIndex++;
     }
